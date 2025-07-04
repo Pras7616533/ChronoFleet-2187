@@ -1,0 +1,42 @@
+[
+    {
+        "username": "player1",
+        "password": "1234",
+        "high_score": 150
+    },
+    {
+        "username": "admin",
+        "password": "adminpass",
+        "high_score": 999
+    },
+    {
+        "username": "guest",
+        "password": "guestpass",
+        "high_score": 50
+    },
+    {
+        "username": "player2",
+        "password": "abcd",
+        "high_score": 200
+    },
+    {
+        "username": "player3",
+        "password": "xyz",
+        "high_score": 300
+    },
+    {
+        "username": "testuser",
+        "password": "testpass",
+        "high_score": 100
+    },
+    {
+        "username": "newuser",
+        "password": "newpass",
+        "high_score": 75
+    },
+    {
+        "username": "adminuser",
+        "password": "admin123",
+        "high_score": 500
+    }
+]

@@ -29,10 +29,31 @@ GAME_OVER_COLOR = (255, 0, 0)
 
 # === Assets ===
 ASSETS_PATH = "assets/"
-PLAYER_IMAGE = "player.png"
-ENEMY_BASIC_IMAGE = "enemy_basic.png"
-ENEMY_MEDIUM_IMAGE = "enemy_medium.png"
-ENEMY_STRONG_IMAGE = "enemy_strong.png"
+PLAYER_IMAGE = ASSETS_PATH + "player.png"
+ENEMY_BASIC_IMAGE = ASSETS_PATH + "enemy_basic.png"
+ENEMY_MEDIUM_IMAGE = ASSETS_PATH + "enemy_medium.png"
+ENEMY_STRONG_IMAGE = ASSETS_PATH + "enemy_strong.png"
+
+# === Background ===
+BACKGROUND_IMAGE = ASSETS_PATH + "bg.jpeg"
+HOME_BACKGROUND_IMAGE = ASSETS_PATH + "home_bg.jpeg"
+
+# === Power-ups ===
+POWERUP_SIZE = (30, 30)
+POWERUP_DURATION = 5000  # milliseconds
+
+# === Power-up icon ===
+ICON_PATH = ASSETS_PATH + "icons/"
+# Powerup icon paths (all placed inside /assets/icons/)
+DOUBLE_SHOT_ICON = "assets/icons/double_shot.png"
+SHIELD_ICON = "assets/icons/shield.png"
+SLOW_ENEMIES_ICON = "assets/icons/slow_enemies.png"
+RAPID_FIRE_ICON = "assets/icons/rapid_fire.png"
+INVINCIBILITY_ICON = "assets/icons/invincibility.png"
+SCORE_BOOST_ICON = "assets/icons/score_boost.png"
+CLEAR_SCREEN_ICON = "assets/icons/clear_screen.png"
+HEAL_ICON = "assets/icons/heal.png"
+
 
 # === Files ===
 HIGH_SCORE_FILE = "data/highscore.txt"

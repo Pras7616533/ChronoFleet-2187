@@ -91,7 +91,6 @@ PixelInvaders/
 
 * 🎨 Theme selector
 * 🎵 Music and SFX toggle
-* 🔐 Password reset
 * 🌐 Online scoreboard support
 
 ## 🙌 Credits

@@ -89,7 +89,7 @@ class PixelInvadersGame:
             pygame.display.update()
 
 
-    def show_home_screen(self):
+    def show_home_screen(self):        
         title_font = pygame.font.SysFont(config.FONT_NAME, 48)
         menu_font = self.font
 
@@ -103,9 +103,9 @@ class PixelInvadersGame:
 
         self.start_requested = False
         while not self.start_requested:
-            self.win.fill(config.BG_COLOR)
+            self.win.blit(utils.load_image(config.BACKGROUND_IMAGE, (config.WIDTH, config.HEIGHT)), (0, 0))
 
-            title = title_font.render("🚀 Pixel Invaders", True, (0, 255, 255))
+            title = title_font.render("ChronoFleet: 2187", True, (0, 255, 255))
             hs = menu_font.render(f"High Score: {high_score}", True, (200, 200, 100))
             ls = menu_font.render(f"Last Score: {last_score}", True, (180, 180, 180))
 
@@ -159,7 +159,7 @@ class PixelInvadersGame:
 
 
     def draw_game(self):
-        self.win.fill(config.BG_COLOR)
+        self.win.blit(utils.load_image(config.BACKGROUND_IMAGE, (config.WIDTH, config.HEIGHT)), (0, 0))
         self.win.blit(self.player_img, self.player)
 
         for bullet in self.bullets:
@@ -174,8 +174,13 @@ class PixelInvadersGame:
         powerups.draw_powerups(self.win, self.active_powerups)
         powerups.draw_timers(self.win, self.player_state)
 
+        heal_icon = utils.load_image(config.HEAL_ICON, (15, 15))
         for i in range(self.player_state["lives"]):
-            pygame.draw.rect(self.win, (255, 50, 50), (config.WIDTH - 20 * (i+1), 10, 15, 15))
+            # Draw heart icon for each life, use heal icon if "heal" powerup is active
+            if heal_icon:
+                self.win.blit(heal_icon, (config.WIDTH - 20 * (i+1), 10))
+            else:
+                pygame.draw.rect(self.win, (255, 50, 50), (config.WIDTH - 20 * (i+1), 10, 15, 15))
 
         score_text = self.font.render(f"Score: {self.score}  High Score: {self.high_score}", True, config.TEXT_COLOR)
         self.win.blit(score_text, (10, 10))
